@@ -67,7 +67,7 @@
             Console.WriteLine("Lav to string variabeler og udskriv dem ved brug af string interpolation.");
             Console.WriteLine("De skal være 'Hello, ' og 'World!'");
             // Lav opgaven herunder!
-            string besked = "Hello,";
+            string besked = "Hello, ";
             string tekst = "World!";
             Console.WriteLine(besked + tekst);
         }
@@ -97,7 +97,7 @@
             Console.WriteLine("Lav en variabel af typen float og tildel den en værdi af 3 + 0.14");
             Console.WriteLine("Udskriv variablen til konsollen.");
             // Lav opgaven herunder!
-            float tal =(float) (3 + 0.14);
+            float tal = 3.14f;
             Console.WriteLine(tal);
         }
 
@@ -107,8 +107,8 @@
             Console.WriteLine("Lav en variabel af typen char og tildel den en værdi af det første bogstav i alfabetet (Det skal være stort!)");
             Console.WriteLine("Udskriv variablen til konsollen.");
             // Lav opgaven herunder!
-            char bogstav = 'A';
-            Console.WriteLine(bogstav);
+            char letter = 'A';
+            Console.WriteLine(letter);
         }
 
         public static void Decimal1()

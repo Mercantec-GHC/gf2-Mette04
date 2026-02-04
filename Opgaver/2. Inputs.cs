@@ -26,8 +26,8 @@ namespace Opgaver
 
             Console.WriteLine("Indtast en streng: ");
             // Lav opgaven herunder!
-            var s = Console.ReadLine();
-            Console.WriteLine(s);
+            string? input = Console.ReadLine();
+            Console.WriteLine(input);
             
         }
 
@@ -52,7 +52,12 @@ namespace Opgaver
 
             Console.WriteLine("Indtast et decimaltal: ");
             // Lav opgaven herunder!
+            string? ageinput=Console.ReadLine();
+            decimal age = decimal.Parse(ageinput);
+
+            Console.WriteLine(age);
         }
+       
 
         public static void Bool1()
         {
@@ -60,8 +65,22 @@ namespace Opgaver
                 "Lav et program som gemmer et input som en sandhedsværdi og skriver værdien ud i konsollen"
             );
 
-            Console.WriteLine("Indtast en sandhedsværdi (sandt/falsk): ");
+            Console.WriteLine("Indtast en sandhedsværdi (true/false): ");
             // Lav opgaven herunder!
+
+            string? honest=Console.ReadLine();
+            bool answer;
+
+            if (bool.TryParse(honest, out answer))
+            {
+                Console.WriteLine(answer);
+            }
+            else
+            {
+                Console.WriteLine("try writing true or false");
+            }
+
+              
         }
 
         // Mini-projekt: Personlig profil (skabelon)
