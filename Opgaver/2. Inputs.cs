@@ -26,6 +26,9 @@ namespace Opgaver
 
             Console.WriteLine("Indtast en streng: ");
             // Lav opgaven herunder!
+            var s = Console.ReadLine();
+            Console.WriteLine(s);
+            
         }
 
         public static void Int1()
@@ -36,6 +39,9 @@ namespace Opgaver
 
             Console.WriteLine("Indtast et tal: ");
             // Lav opgaven herunder!
+            int tal = Convert.ToInt32 (Console.ReadLine());
+            Console.WriteLine(tal);
+            
         }
 
         public static void Double1()
