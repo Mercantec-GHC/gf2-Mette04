@@ -94,6 +94,21 @@ namespace Opgaver
             );
             Console.WriteLine("Eksempel: Hej, jeg hedder X, er X år gammel og kommer fra X!");
             // Lav opgaven herunder!
+            Console.WriteLine("Skriv din alder");
+            int one = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(one);
+
+            Console.WriteLine("Skriv dit navn");
+            string? name = Console.ReadLine();
+            Console.WriteLine(name);
+
+            Console.WriteLine("Skriv din hjemby");
+            string? city = Console.ReadLine();
+            Console.WriteLine(city);
+
+            Console.WriteLine("Hej, Jeg hedder " + name + " jeg er " + one + " år gammel og jeg kommer fra " + city);
+
+
         }
 
         // Mini-projekt 2: BMI-beregner (skabelon)
@@ -108,6 +123,18 @@ namespace Opgaver
             Console.WriteLine(
                 "Tip: BMI beregnes som vægt divideret med højde i anden (BMI = vægt / (højde * højde))."
             );
-        }
+            
+            Console.WriteLine("Skriv din vægt i kg. Skriv kun et helt tal");
+            int weight = Convert.ToInt32(Console.ReadLine());
+            
+
+            Console.WriteLine("Skriv din højde i meter, skriv det i decimal tal");
+            string? height = Console.ReadLine();
+            decimal tall = decimal.Parse(height);
+
+            decimal three = (tall * tall);
+            decimal bmi = (weight / three);
+            Console.WriteLine("Du vejer " + weight + "kg og er " + tall + "meter høj. Din bmi er " + bmi);
+        } 
     }
 }
