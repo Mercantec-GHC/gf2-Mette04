@@ -128,7 +128,7 @@ namespace Opgaver
             int weight = Convert.ToInt32(Console.ReadLine());
             
 
-            Console.WriteLine("Skriv din højde i meter, skriv det i decimal tal");
+            Console.WriteLine("Skriv din højde i meter, skriv det i decimal tal, brug komma");
             string? height = Console.ReadLine();
             decimal tall = decimal.Parse(height);
 

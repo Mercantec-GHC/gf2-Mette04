@@ -27,18 +27,60 @@ namespace Opgaver
                 "Lav et program som tjekker om en given værdi er højere eller lavere end 18"
             );
             // Lav opgaven herunder!
+            Console.WriteLine("skriv et heltal");
+            int num = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(num);
+
+            if(num > 18)
+            {
+                Console.WriteLine("tallet er større end 18");
+            }
+            else if(num < 18)
+            {
+                Console.WriteLine("tallet er mindre end 18");
+            }
+            else if (num == 18)
+            {
+                Console.WriteLine("tallet er lig med 18");
+            }
+           
         }
 
         public static void If2()
         {
             Console.WriteLine("Lav et program som tjekker om en given værdi er lige eller ulige");
-            // Lav opgaven herunder!
+            // Lav opgaven herunder!'
+            int ber = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(ber);
+
+            if (ber % 2 == 0)
+            {
+                Console.WriteLine("nummeret er lige");
+            }
+            else
+            {
+                Console.WriteLine("nummeret er ulige");
+            }
+
         }
 
         public static void Switch1()
         {
             Console.WriteLine("Lav et program som tjekker om en given værdi er lige eller ulige");
             // Lav opgaven herunder!
+            int okay = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(okay);
+            int sej = okay % 2;
+
+            switch(sej)
+            {
+                case 0:
+                    Console.WriteLine("talet er lige");
+                    break;
+                case 1:
+                    Console.WriteLine("talet er ulige");
+                    break;
+            }
         }
 
         public static void Ternary1()
