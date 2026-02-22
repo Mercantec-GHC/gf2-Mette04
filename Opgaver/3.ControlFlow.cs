@@ -11,13 +11,13 @@ namespace Opgaver
                 @"Velkommen til opgaver omkring Control Flow med if, else if og else, 
             Switch og Ternary operator!"
             );
-            If1();
-            If2();
+            //If1();
+            //If2();
 
-            Switch1();
-            Ternary1();
+            //Switch1();
+            //Ternary1();
 
-            MiniProjektQuiz();
+            //MiniProjektQuiz();
             MiniProjektKarakterFeedback();
         }
 
@@ -50,6 +50,7 @@ namespace Opgaver
         {
             Console.WriteLine("Lav et program som tjekker om en given værdi er lige eller ulige");
             // Lav opgaven herunder!'
+            Console.WriteLine("skriv et heltal");
             int ber = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine(ber);
 
@@ -68,6 +69,7 @@ namespace Opgaver
         {
             Console.WriteLine("Lav et program som tjekker om en given værdi er lige eller ulige");
             // Lav opgaven herunder!
+            Console.WriteLine("skriv et heltal");
             int okay = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine(okay);
             int sej = okay % 2;
@@ -87,6 +89,13 @@ namespace Opgaver
         {
             Console.WriteLine("Lav et program som tjekker om en given værdi er lige eller ulige");
             // Lav opgaven herunder!
+            int good = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(good);
+            int fine = good % 2;
+
+            string result = (fine == good % 2) ? "ulige" : "lige";
+
+            Console.WriteLine(result);
         }
 
         public static void MiniProjektQuiz()
@@ -104,6 +113,62 @@ namespace Opgaver
                 "Tip: Brug variabler til at gemme point og svar, og if/else til at tjekke svarene."
             );
             // Lav opgaven herunder!
+            int point = 0;
+            Console.WriteLine("Hvad er hovedstaden i Japan?");
+            string? capital = Console.ReadLine();
+            if (capital == "Tokyo")
+            {
+                Console.WriteLine("Det rigtigt!");
+                point =+ 1;
+            }
+            else if (capital == "tokyo")
+            {
+                Console.WriteLine("Det rigigt!");
+                point =+ 1;
+            }
+            else
+            {
+                Console.WriteLine("Det er desværre forkert");
+            }
+
+            Console.WriteLine("Hvor mange mennesker bor der i Danmark?");
+            Console.WriteLine(" A) 6milioner B) 5.9milioner C)6.2milioner");
+            Console.WriteLine("Skriv A, B eller C");
+            string? people= Console.ReadLine();
+            if (people == "A")
+            {
+                Console.WriteLine("Det rigtigt!");
+                point = +1;
+            }
+            else if (people == "a")
+            {
+                Console.WriteLine("Det rigtigt!");
+                point = +1;
+            }
+            else
+            {
+                Console.WriteLine("Det forkert");
+            }
+
+            Console.WriteLine("unscramble det her ord aprty");
+            string? word = Console.ReadLine();
+            if (word == "party")
+            {
+                Console.WriteLine("Det rigtigt!");
+                point = +1; 
+            }
+            else if (word == "Party")
+            {
+                Console.WriteLine("Det rigtigt!");
+                point= +1;
+            }
+            else
+            {
+                Console.WriteLine("Det fokert");
+            }
+
+            Console.WriteLine("du har " + point + " rigtige");
+            
         }
 
         public static void MiniProjektKarakterFeedback()
@@ -124,6 +189,50 @@ namespace Opgaver
             for en bruger og man regner gennemsnittet ud."
             );
             // Lav opgaven herunder!
+            Console.WriteLine("indtast en karakter");
+            string gradeinput = Console.ReadLine();
+            int grade;
+
+            if (int.TryParse(gradeinput, out grade))
+            {
+                if (grade == 12)
+                {
+                    Console.WriteLine("Fucking godt kalret!");
+                }
+                else if (grade == 10)
+                {
+                    Console.WriteLine("Skide godt!");
+                }
+                else if (grade == 7)
+                {
+                    Console.WriteLine("Godt!");
+                }
+                else if (grade == 4)
+                {
+                    Console.WriteLine("Okay, du kan gøre det bedre");
+                }
+                else if (grade == 02)
+                {
+                    Console.WriteLine("du er lige præcis bestået...du kan gøre det bedre");
+                }
+                else if (grade == 00)
+                {
+                    Console.WriteLine("oof du bestod ikke, kom på banen");
+                }
+                else if (grade == -3)
+                {
+                    Console.WriteLine("Sorry to say, men du fucking dårlig");
+                }
+                else
+                {
+                    Console.WriteLine("ikke en gyldig karakter");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Ugyldigt input! Sørg for at indtaste et heltal.");
+            }
+            
         }
     }
 }
