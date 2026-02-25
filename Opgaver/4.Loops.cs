@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 
 namespace Opgaver
 {
@@ -27,6 +28,10 @@ namespace Opgaver
             Console.WriteLine("Opgave 1:");
             Console.WriteLine("Brug et loop til at udskrive tallene fra 1 til 10.");
             // Lav opgaven herunder!
+            for (int i = 1; i < 11; i++)
+            {
+                Console.WriteLine("i = " + i);
+            }
         }
 
         public static void Loop2()
@@ -34,6 +39,14 @@ namespace Opgaver
             Console.WriteLine("Opgave 2:");
             Console.WriteLine("Brug et loop og en if-betingelse til at udskrive alle lige tal fra 2 til 20.");
             // Lav opgaven herunder!
+            for (int i = 2; i < 21; i++)
+            {
+                if (i % 2 == 1)
+                {
+                    continue;
+                }
+                Console.WriteLine("i = " + i);
+            }
         }
 
         public static void Loop3()
@@ -41,6 +54,14 @@ namespace Opgaver
             Console.WriteLine("Opgave 3:");
             Console.WriteLine("Brug et loop til at lægge alle tal fra 1 til 100 sammen og udskriv resultatet.");
             // Lav opgaven herunder!
+            int point = 0;
+            for (int i = 1; i < 101; i++)
+            {
+                Console.WriteLine("i = " + i);
+                point += i;
+            }
+            Console.WriteLine(point);
+
         }
 
         public static void Loop4()
@@ -48,6 +69,14 @@ namespace Opgaver
             Console.WriteLine("Opgave 4:");
             Console.WriteLine("Bed brugeren om at indtaste sit navn og et tal. Udskriv navnet det antal gange ved hjælp af et loop.");
             // Lav opgaven herunder!
+            Console.WriteLine("indtast dit navn");
+            string name = Console.ReadLine();
+            Console.WriteLine("indtast et tal");
+            int number = int.Parse(Console.ReadLine());
+            for (int i = 0; i< number; i++)
+            {
+                Console.WriteLine(name);
+            }
         }
 
         public static void Loop5()
@@ -55,6 +84,12 @@ namespace Opgaver
             Console.WriteLine("Opgave 5:");
             Console.WriteLine("Bed brugeren om at indtaste et tal. Brug et loop til at udskrive alle tal fra det indtastede tal og ned til 1.");
             // Lav opgaven herunder!
+            Console.WriteLine("indtast tal");
+            int one = int.Parse(Console.ReadLine());
+            for (int i =one; i >= 1; i--)
+            {
+                Console.WriteLine(i);
+            }
         }
 
         public static void Loop6()
@@ -63,6 +98,12 @@ namespace Opgaver
             Console.WriteLine(@"Brug et loop til at udskrive alle bogstaverne i dit navn (ét bogstav pr. linje). 
             Navnet skal være gemt i en string variabel.");
             // Lav opgaven herunder!
+            Console.WriteLine("skriv dit navn");
+            string nam = Console.ReadLine();
+            for (int i = 0; i < nam.Length; i++)
+            {
+                Console.WriteLine(nam[i]);
+            }
         }
 
         public static void Loop7()
@@ -70,6 +111,9 @@ namespace Opgaver
             Console.WriteLine("Opgave 7:");
             Console.WriteLine("Brug et loop til at tælle, hvor mange gange bogstavet 'a' optræder i en tekst, som brugeren indtaster.");
             // Lav opgaven herunder!
+            Console.WriteLine("indtast en tekst");
+            string text = Console.ReadLine();
+            
         }
 
         public static void Loop8()
