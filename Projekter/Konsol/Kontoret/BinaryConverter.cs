@@ -177,7 +177,7 @@ namespace Kontoret
                 Console.WriteLine("Her er de i hele tal");
                 ipAddress.PrintOctetOutput();               
                 Console.ReadKey();
-                break;
+                
             }                             
         }
         //lister
