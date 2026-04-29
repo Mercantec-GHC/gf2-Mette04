@@ -7,15 +7,11 @@ namespace Kontoret
 {
     public class BinaryConverter
     {
-
         public void Start()
-
-
         {
             string? tal;
             int svar;
-            string? num;
-            int ans;
+            
             
             Console.WriteLine("Skriv et tal mellem 0 og 255");
             // Fra decimal til binær
@@ -42,7 +38,6 @@ namespace Kontoret
                         //starter loopet forfra
                         continue;
                     }
-
                 }
                 else
                 {
@@ -115,10 +110,7 @@ namespace Kontoret
                     ipAddress.octets.Clear();
                     continue;
                 }
-
-                //Den tilføjer vores nye streng og laver den til en int, og tilføjer den til vores liste, i dette tilfælde vores "octets" liste.
-
-
+               
 
                 // List of power of two numbers 128, 64, 32, 16, 8, 4, 2, 1
                 List<int> powerOfTwo = new List<int> { 128, 64, 32, 16, 8, 4, 2, 1 };
@@ -131,24 +123,25 @@ namespace Kontoret
                     int tempoctet = octet;
                     for (int i = 0; i < powerOfTwo.Count; i++)
                     {
-
+                        //Den går iegnnem vores poweroftwo liste.
+                        //Den starter fra venstre og ser om den kan trække 128 fra vores input.
+                        //Hvis ja, så sætter den et 1 tal, hvis nej så sætter den et 0,
+                        //Også går den vidre til næste tal i rækken
                         if (tempoctet >= powerOfTwo[i])
                         {
-                            //hvis vores binære input er 1, så skal den gå op i vores poweroftwo liste, og tilføje tallet der passer til 1-tallets position
+                           
                             binary += "1";
                             tempoctet -= powerOfTwo[i];
                         }
                         else
                         {
-                            //Hvis vore binære input er 0, skal den ikke tilføje noget.
+                            
                             binary += "0";
                         }
                     }
                     //Så vi kan få et punktum mellem hver octet 
                     binary += ".";
                 }
-
-
 
                 Console.WriteLine("Her er de i binær");
                 Console.WriteLine(binary);
@@ -163,12 +156,12 @@ namespace Kontoret
                 Console.WriteLine("Indtast den fjerde binære streng: ");
                 ipAddress.binær.Add(Console.ReadLine());
 
-
                 // Fra binær til decimal 
-
 
                 foreach (string binær in ipAddress.binær)
                 {
+                    //hvis vores binære input er 1, så skal den gå op i vores poweroftwo liste, og tilføje tallet der passer til 1-tallets position
+                    //Hvis vore binære input er 0, skal den ikke tilføje noget.
                     int octetOutput = 0;
                     for (int i = 0; i < binær.Length; i++)
                     {
@@ -185,14 +178,12 @@ namespace Kontoret
                 ipAddress.PrintOctetOutput();               
                 Console.ReadKey();
                 break;
-            }
-                               
+            }                             
         }
-
         //lister
         public class IpAddress
         {
-            //Octet er en værdi/streng, som foreksempel et tal fra 0-255 eller 8 binære tal, altså fra punktum til punktum
+            //Octet er en værdi/streng, på 8 bits, altså fra punktum til punktum. 00000000-11111111.
             public List<int> octets = new List<int>();
             public List<string> binær = new List<string>();
             public List<int> octetOutput = new List<int>();
@@ -203,7 +194,5 @@ namespace Kontoret
                 Console.WriteLine($"{octetOutput[0]}.{octetOutput[1]}.{octetOutput[2]}.{octetOutput[3]}");
             }
         }
-
-
     }
 }
