@@ -15,10 +15,14 @@ namespace Kontoret
             
             Console.WriteLine("Skriv et tal mellem 0 og 255");
             // Fra decimal til binær
+            //Vi har lavet en class fom vi kalder for ipadresse, som vi kan gemme vores lister under
             IpAddress ipAddress = new IpAddress();
 
+            //vi laver et while loop som kører mens den er true, det er den hele tiden
             while (true) {
+                //vi spørger brugeren om at indtast den første octet
                 Console.WriteLine("Indtast den første octet: ");
+                //Vi gemmer brugerens input under variablen "tal"
                 tal = Console.ReadLine();
                 
                 //tjekkker at vi har skrevet en int/tal.
@@ -114,7 +118,7 @@ namespace Kontoret
 
                 // List of power of two numbers 128, 64, 32, 16, 8, 4, 2, 1
                 List<int> powerOfTwo = new List<int> { 128, 64, 32, 16, 8, 4, 2, 1 };
-                string binary = "";
+                string binary = "";                    
 
                 foreach (int octet in ipAddress.octets)
                 {
@@ -177,13 +181,13 @@ namespace Kontoret
                 Console.WriteLine("Her er de i hele tal");
                 ipAddress.PrintOctetOutput();               
                 Console.ReadKey();
-                
+                break;
             }                             
         }
         //lister
         public class IpAddress
         {
-            //Octet er en værdi/streng, på 8 bits, altså fra punktum til punktum. 00000000-11111111.
+            //Octet er på 8 bits, altså fra punktum til punktum. 00000000-11111111.
             public List<int> octets = new List<int>();
             public List<string> binær = new List<string>();
             public List<int> octetOutput = new List<int>();
